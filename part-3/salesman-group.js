@@ -1,5 +1,8 @@
 const ClientGroup = require('./client-group');
 
 module.exports = class SalesmanGroup extends ClientGroup {
-  constructor() {}
+  constructor(salesmen) {
+    super(salesmen);
+    this.salesmen = salesmen;
+  }
 };
