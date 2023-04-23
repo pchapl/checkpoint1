@@ -1,9 +1,7 @@
-module.exports = class Client {
+const Person = require('./person');
+module.exports = class Client extends Person {
   constructor(firstName, lastName, middleName, phone, discount) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.middleName = middleName;
-    this.phone = phone;
+    super(firstName, lastName, middleName, phone);
     this.discount = discount;
   }
 

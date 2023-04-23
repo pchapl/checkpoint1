@@ -1,11 +1,7 @@
-module.exports = class ClientGroup {
-  constructor(clients) {
-    this.clients = clients;
-  }
+const PersonGroup = require('./person-group');
 
-  getFios() {
-    return this.clients
-      .map((client) => client.getFio())
-      .join(', ');
+module.exports = class ClientGroup extends PersonGroup{
+  get clients() {
+    return this.persons;
   }
 };
